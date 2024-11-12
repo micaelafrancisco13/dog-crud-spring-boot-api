@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dog-crud-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dog-crud-app
+  template:
+    metadata:
+      labels:
+        app: dog-crud-app
+    spec:
+      containers:
+        - name: dog-crud-app
+          image: micaelafrancisco/dog-crud-app:latest
+          ports:
+            - containerPort: 8080
