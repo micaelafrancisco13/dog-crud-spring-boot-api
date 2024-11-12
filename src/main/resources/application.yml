@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dog-crud-spring-boot-api
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:database
+    username: ela
+    password: ranthered13
+  h2:
+    console:
+      enabled: true
